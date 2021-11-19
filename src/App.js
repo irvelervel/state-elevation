@@ -1,7 +1,7 @@
-import './App.css'
-import MyTable from './components/MyTable'
-import { Col, Container, Row } from 'react-bootstrap'
-import MyAlert from './components/MyAlert'
+import "./App.css";
+import Table from "./components/Table";
+import { Col, Container, Row } from "react-bootstrap";
+import Detail from "./components/Detail";
 
 function App() {
   return (
@@ -10,16 +10,16 @@ function App() {
         <Container>
           <Row>
             <Col>
-              <MyTable />
+              <Table />
             </Col>
             <Col className="my-auto">
-              <MyAlert />
+              <Detail />
             </Col>
           </Row>
         </Container>
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
