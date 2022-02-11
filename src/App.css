@@ -37,6 +37,10 @@
   }
 }
 
-.pointer {
+.list-group-item {
   cursor: pointer;
+}
+
+.selected {
+  color: red !important;
 }

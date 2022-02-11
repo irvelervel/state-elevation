@@ -1,44 +1,42 @@
-import { Component } from "react";
-import { ListGroup } from "react-bootstrap";
+import { Component } from 'react'
+import { ListGroup } from 'react-bootstrap'
 
 class Table extends Component {
   state = {
-    selected: null,
-  };
+    selected: undefined,
+  }
+
+  checkSelected = (value) => (value === this.state.selected ? 'selected' : '')
 
   render() {
     return (
       <>
         <ListGroup>
           <ListGroup.Item
-            className="pointer"
-            onClick={(e) => this.setState({ selected: e.target.innerText })}
+            onClick={(e) => this.setState({ selected: 'First' })}
+            className={this.checkSelected('First')}
           >
-            Browny
+            First
           </ListGroup.Item>
           <ListGroup.Item
-            className="pointer"
-            onClick={(e) => this.setState({ selected: e.target.innerText })}
+            onClick={(e) => this.setState({ selected: 'Second' })}
+            className={this.checkSelected('Second')}
           >
-            Whitey
+            Second
           </ListGroup.Item>
           <ListGroup.Item
-            className="pointer"
-            onClick={(e) => this.setState({ selected: e.target.innerText })}
+            onClick={(e) => this.setState({ selected: 'Third' })}
+            className={this.checkSelected('Third')}
           >
-            Blacky
-          </ListGroup.Item>
-          <ListGroup.Item
-            className="pointer"
-            onClick={(e) => this.setState({ selected: e.target.innerText })}
-          >
-            Wolf
+            Third
           </ListGroup.Item>
         </ListGroup>
-        <p className="mt-3">Local state is {this.state.selected || "null"}</p>
+        <p className='mt-3'>
+          Local state is {this.state.selected || 'undefined'}
+        </p>
       </>
-    );
+    )
   }
 }
 
-export default Table;
+export default Table
