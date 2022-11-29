@@ -11,7 +11,7 @@ class Table extends Component {
   render() {
     return (
       <>
-        <ListGroup>
+        <ListGroup className="text-dark">
           <ListGroup.Item
             onClick={(e) => this.setState({ selected: 'First' })}
             className={this.checkSelected('First')}
@@ -31,7 +31,7 @@ class Table extends Component {
             Third
           </ListGroup.Item>
         </ListGroup>
-        <p className='mt-3'>
+        <p className="mt-3">
           Local state is {this.state.selected || 'undefined'}
         </p>
       </>
