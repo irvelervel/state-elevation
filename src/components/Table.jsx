@@ -13,26 +13,26 @@ class Table extends Component {
       <>
         <ListGroup className="text-dark">
           <ListGroup.Item
-            onClick={(e) => this.setState({ selected: 'First' })}
-            className={this.checkSelected('First')}
+            onClick={(e) => this.setState({ selected: 'Uno' })}
+            className={this.checkSelected('Uno')}
           >
-            First
+            Uno
           </ListGroup.Item>
           <ListGroup.Item
-            onClick={(e) => this.setState({ selected: 'Second' })}
-            className={this.checkSelected('Second')}
+            onClick={(e) => this.setState({ selected: 'Due' })}
+            className={this.checkSelected('Due')}
           >
-            Second
+            Due
           </ListGroup.Item>
           <ListGroup.Item
-            onClick={(e) => this.setState({ selected: 'Third' })}
-            className={this.checkSelected('Third')}
+            onClick={(e) => this.setState({ selected: 'Tre' })}
+            className={this.checkSelected('Tre')}
           >
-            Third
+            Tre
           </ListGroup.Item>
         </ListGroup>
         <p className="mt-3">
-          Local state is {this.state.selected || 'undefined'}
+          Stato del componente: {this.state.selected || 'undefined'}
         </p>
       </>
     )
